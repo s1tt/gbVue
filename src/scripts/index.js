@@ -11,3 +11,7 @@ import '../styles/articles/articles.scss';
 import '../styles/footer/footer.scss';
 
 import '../styles/tasks/tasks.scss';
+
+import App from './vue';
+// eslint-disable-next-line no-undef
+Vue.createApp(App).mount('#rootVue');

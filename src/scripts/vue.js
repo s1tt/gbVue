@@ -29,5 +29,5 @@ const App = {
     },
   },
 };
-// eslint-disable-next-line no-undef
-Vue.createApp(App).mount('#rootVue');
+
+export default App;
