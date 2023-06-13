@@ -1,0 +1,91 @@
+@import '../constants.scss';
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  &__title {
+    font-family: $dmSerifDisplay;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: $mainFontColor;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-family: $jost;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $secontFontColor;
+    text-align: center;
+    max-width: 737px;
+    margin-bottom: 93px;
+  }
+
+  &__items {
+    width: 100%;
+    display: grid;
+    gap: 56px 10px;
+    grid-template-columns: repeat(2, 547px);
+    justify-content: space-between;
+  }
+
+  &__item {
+    &-border {
+      &-top-left {
+        border-radius: 0px 80px 0px 0px;
+      }
+      &-top-right {
+        border-radius: 80px 0px 0px 0px;
+      }
+      &-bottom-left {
+        border-radius: 0px 0px 80px 0px;
+      }
+      &-bottom-right {
+        border-radius: 0px 0px 0px 80px;
+      }
+    }
+    // width: 547px;
+
+    &-img {
+      // border-radius: 0px 80px 0px 0px;
+      width: 100%;
+      margin-bottom: 28px;
+    }
+    &-title {
+      margin: 0;
+      font-family: $dmSerifDisplay;
+      font-size: 25px;
+      line-height: 125%;
+      letter-spacing: 0.02em;
+      color: $mainFontColor;
+    }
+    &-subtitle {
+      margin: 0;
+      font-family: $jost;
+      font-size: 22px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: $secontFontColor;
+    }
+    &-description {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    &-btn-ico {
+      padding: 26px 32px;
+      background-color: #f4f0ec;
+      border-radius: 50%;
+    }
+  }
+}

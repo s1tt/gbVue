@@ -1,0 +1,127 @@
+@import '../constants.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding-bottom: 100px;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    max-width: 393px;
+  }
+
+  &__logo {
+    margin: 0;
+    transition: 0.3s;
+    margin-bottom: 18px;
+  }
+
+  &__logo:hover {
+    transform: scale(1.04);
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    color: $mainFontColor;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo-title {
+    font-family: $dmSerifDisplay;
+    font-size: 40px;
+    line-height: 125%;
+  }
+
+  &__description {
+    margin: 0;
+    font-family: $jost;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $secontFontColor;
+    margin-bottom: 34px;
+  }
+
+  &__social-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 52px;
+  }
+
+  &__column-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 344px;
+  }
+
+  &__nav {
+    &-title {
+      margin: 0;
+      font-family: $dmSerifDisplay;
+      font-size: 25px;
+      line-height: 125%;
+      color: $mainFontColor;
+    }
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
+    &-item-link {
+      text-decoration: none;
+      font-family: $jost;
+      font-size: 22px;
+      line-height: 300%;
+      letter-spacing: 0.01em;
+      color: $secontFontColor;
+      transition: 0.3s;
+    }
+
+    &-item-link:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__column-contacts {
+    max-width: 258px;
+  }
+  &__contacts {
+    &-title {
+      margin: 0;
+      font-family: $dmSerifDisplay;
+      font-size: 25px;
+      line-height: 125%;
+      color: $mainFontColor;
+      margin-bottom: 26px;
+    }
+    &-office,
+    &-mail,
+    &-tel {
+      display: flex;
+      text-decoration: none;
+      font-family: $jost;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: $secontFontColor;
+      transition: 0.3s;
+      margin-bottom: 33px;
+    }
+    &-office:hover,
+    &-mail:hover,
+    &-tel:hover {
+      opacity: 0.6;
+    }
+  }
+}

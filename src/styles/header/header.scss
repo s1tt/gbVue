@@ -1,0 +1,63 @@
+@import '../constants.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  justify-self: center;
+  padding-bottom: 57px;
+  position: relative;
+  padding-top: 60px;
+
+  &__logo {
+    margin: 0;
+    transition: 0.3s;
+  }
+
+  &__logo:hover {
+    transform: scale(1.04);
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    color: $mainFontColor;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo-title {
+    font-family: $dmSerifDisplay;
+    font-size: 40px;
+    line-height: 125%;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    &-list {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      gap: 48px;
+    }
+    &-link {
+      font-family: $jost;
+      font-size: 20px;
+      line-height: 125%;
+      text-decoration: none;
+      color: $mainFontColor;
+    }
+    &-link:hover {
+      opacity: 0.6;
+    }
+    &-link_active {
+      // text-decoration: underline;
+      border-bottom: 1px solid $mainFontColor;
+      cursor: default;
+    }
+    &-link_active:hover {
+      opacity: 1;
+    }
+  }
+}
