@@ -27,7 +27,7 @@
   }
 
   &__logo-title {
-    font-family: $dmSerifDisplay;
+    font-family: $mainFont;
     font-size: 40px;
     line-height: 125%;
   }
@@ -42,17 +42,17 @@
       gap: 48px;
     }
     &-link {
-      font-family: $jost;
+      font-family: $secondFont;
       font-size: 20px;
       line-height: 125%;
       text-decoration: none;
-      color: $mainFontColor;
+      color: $secontFontColor;
     }
     &-link:hover {
       opacity: 0.6;
     }
     &-link_active {
-      // text-decoration: underline;
+      pointer-events: none;
       border-bottom: 1px solid $mainFontColor;
       cursor: default;
     }

@@ -14,6 +14,8 @@
   }
 
   &__logo {
+    display: flex;
+    width: 176px;
     margin: 0;
     transition: 0.3s;
     margin-bottom: 18px;
@@ -32,19 +34,27 @@
   }
 
   &__logo-title {
-    font-family: $dmSerifDisplay;
+    font-family: $mainFont;
     font-size: 40px;
     line-height: 125%;
   }
 
   &__description {
     margin: 0;
-    font-family: $jost;
+    font-family: $secondFont;
     font-size: 22px;
     line-height: 150%;
     letter-spacing: 0.01em;
     color: $secontFontColor;
     margin-bottom: 34px;
+  }
+
+  &__social-item {
+    transition: opacity 0.3s;
+  }
+
+  &__social-item:hover {
+    opacity: 0.6;
   }
 
   &__social-list {
@@ -65,7 +75,7 @@
   &__nav {
     &-title {
       margin: 0;
-      font-family: $dmSerifDisplay;
+      font-family: $mainFont;
       font-size: 25px;
       line-height: 125%;
       color: $mainFontColor;
@@ -79,7 +89,7 @@
     }
     &-item-link {
       text-decoration: none;
-      font-family: $jost;
+      font-family: $secondFont;
       font-size: 22px;
       line-height: 300%;
       letter-spacing: 0.01em;
@@ -98,7 +108,7 @@
   &__contacts {
     &-title {
       margin: 0;
-      font-family: $dmSerifDisplay;
+      font-family: $mainFont;
       font-size: 25px;
       line-height: 125%;
       color: $mainFontColor;
@@ -109,7 +119,7 @@
     &-tel {
       display: flex;
       text-decoration: none;
-      font-family: $jost;
+      font-family: $secondFont;
       font-style: normal;
       font-size: 22px;
       line-height: 150%;

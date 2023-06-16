@@ -9,28 +9,25 @@
 </head>
 <body>
   <div id="rootVue">
+
     <section class="task task1">
-      <button @click="taskOneClick" class="btn" type="button">{{title}}</button>
-    </section>
-    <section class="task task2">
-      <button @click="taskTwoClickDel" class="btnDel" type="button">{{del}}</button>
-      <button @click="taskTwoClickAdd" class="btnAdd" type="button">{{add}}</button>
-
-      <form action="#" name="form">
-        <label for="input">Add Item</label>
-        <input v-model="inputValue" type="text" name="input" id="input" placeholder="Add Item">
-        <button @click="taskTwoClickAdd2" class="btnAdd" type="submit">{{add2}}</button>
-      </form>
-
-      <ul class="taskTwo__list">
-        <li v-for="item in list" class="taskTwo__item">{{item.text}}</li>
+      <ul class="products">
+        <li v-for="product in products" ::key="product.id" class="product">
+          <p class="product__title">{{product.title}}</p>
+          <p class="product__price">{{product.price}}$</p>
+        </li>
       </ul>
-
-    </section>
-    <section class="task task3">
-      <p><a href="https://github.com/s1tt/gbVue">Код с лендингом</a></p>
-      <p><a href="https://github.com/s1tt/gbVue/blob/main/src/scripts/vue.js">Код с задачами на Вью</a></p>
-    </section>
+      <select v-model="selected" @change="handleSort">
+        <option disabled value="">Select a sorting</option>
+        <option value="Descending">Descending price</option>
+        <option value="Ascending">Ascending price</option>
+      </select>
+      <section class="task task3">
+        <p><a href="./index.html">Назад</a></p>
+        <p><a href="https://github.com/s1tt/gbVue">Код с лендингом (Последняя ветка)</a></p>
+        <p><a href="https://github.com/s1tt/gbVue/blob/main/src/scripts/vue.js">Код с задачами на Вью (Последняя
+            ветка)</a></p>
+      </section>
   </div>
 </body>
 </html>

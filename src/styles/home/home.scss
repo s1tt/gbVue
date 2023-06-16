@@ -1,0 +1,298 @@
+@import '../constants.scss';
+
+.startingSection {
+  background-image: url('../../assets/img/startingImage.jpg');
+  background-size: cover;
+  background-size: contain;
+  height: 758px;
+  border-radius: 70px;
+  margin-bottom: 96px;
+
+  &__title {
+    font-family: $mainFont;
+    font-size: 65px;
+    line-height: 125%;
+    color: $mainFontColor;
+    margin: 0;
+    max-width: 434px;
+    padding-top: 208px;
+    padding-left: 52px;
+  }
+
+  &__subtitle {
+    font-family: $secondFont;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $secontFontColor;
+    max-width: 434px;
+    margin: 0;
+    padding-top: 18px;
+    padding-left: 52px;
+    margin-bottom: 21px;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-left: 52px;
+    padding: 26px 48px;
+    font-family: $secondFont;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 125%;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: $mainFontColor;
+    letter-spacing: 0.02em;
+    box-shadow: 0px 10px 20px rgba(192, 192, 192, 0.35);
+    border-radius: 18px;
+
+    &-wrapper {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  &__title {
+    font-family: $mainFont;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: $mainFontColor;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-family: $secondFont;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $secontFontColor;
+    text-align: center;
+    max-width: 737px;
+    margin-bottom: 93px;
+  }
+
+  &__items {
+    width: 100%;
+    display: grid;
+    gap: 56px 10px;
+    grid-template-columns: repeat(2, 547px);
+    justify-content: space-between;
+  }
+
+  &__item {
+    &-border {
+      &-top-left {
+        border-radius: 0px 80px 0px 0px;
+      }
+      &-top-right {
+        border-radius: 80px 0px 0px 0px;
+      }
+      &-bottom-left {
+        border-radius: 0px 0px 80px 0px;
+      }
+      &-bottom-right {
+        border-radius: 0px 0px 0px 80px;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      margin-bottom: 28px;
+    }
+    &-title {
+      margin: 0;
+      font-family: $mainFont;
+      font-size: 25px;
+      line-height: 125%;
+      letter-spacing: 0.02em;
+      color: $mainFontColor;
+    }
+    &-subtitle {
+      margin: 0;
+      font-family: $secondFont;
+      font-size: 22px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: $secontFontColor;
+    }
+    &-description {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    &-btn-ico {
+      padding: 26px 32px;
+      background-color: #f4f0ec;
+      border-radius: 50%;
+    }
+  }
+}
+
+.achievements {
+  background-color: #f4f0ec;
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 96px;
+
+  &__item {
+    margin: 151px 0;
+    padding: 0 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    &-title {
+      margin: 0;
+      font-family: $mainFont;
+      font-size: 85px;
+      line-height: 125%;
+      letter-spacing: 0.02em;
+      color: #cda274;
+    }
+    &-subtitle {
+      margin: 0;
+      font-family: $secondFont;
+      font-size: 22px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: $secontFontColor;
+    }
+  }
+  &__item:not(:last-of-type) {
+    border-right: 1px solid #cda274;
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 96px;
+
+  &__title {
+    margin: 0;
+    font-family: $mainFont;
+    font-size: 50px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: $mainFontColor;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    max-width: 811px;
+    text-align: center;
+    font-family: $secondFont;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $secontFontColor;
+    margin-bottom: 52px;
+  }
+  &__items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    background-color: #f4f0ec;
+  }
+
+  &__item:hover &__item-btn-ico {
+    background-color: #ffffff;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    filter: drop-shadow(0px 10px 30px rgba(255, 255, 255, 0.25));
+    border-radius: 62px;
+    display: flex;
+    flex-direction: column;
+    padding: 21px 21px 34px 21px;
+    position: relative;
+    width: 382px;
+    transition: 0.3s;
+
+    &-img {
+      border-radius: 45px 45px 0px 0px;
+      margin-bottom: 9px;
+    }
+
+    &-design {
+      font-family: $secondFont;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      text-transform: capitalize;
+      position: absolute;
+      top: 247px;
+      left: 40px;
+      padding: 9px 11px;
+      background-color: #ffffff;
+      border-radius: 8px 8px 8px 0px;
+    }
+
+    &-title {
+      margin: 0;
+      max-width: 275px;
+      font-family: $mainFont;
+      font-size: 25px;
+      line-height: 125%;
+      letter-spacing: 0.02em;
+      color: $mainFontColor;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    &-description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-date {
+      margin: 0;
+      font-family: $secondFont;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      text-transform: capitalize;
+      color: $secontFontColor;
+    }
+
+    &-btn-ico {
+      padding: 19px 21px;
+      border-radius: 50%;
+      background-color: #f4f0ec;
+      transition: all 0.3s;
+    }
+  }
+}

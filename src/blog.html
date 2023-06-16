@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <title>First Vue: Main page</title>
+  <title>First Vue: Blog</title>
 </head>
 <body>
   <div id="root">
@@ -26,131 +26,53 @@
       </h1>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="./index.html" class="header__nav-link header__nav-link_active">Home</a>
+          <li class="header__nav-item"><a href="./index.html" class="header__nav-link">Home</a>
           </li>
           <li class="header__nav-item"><a href="#" class="header__nav-link">Project</a></li>
-          <li class="header__nav-item"><a href="./blog.html" class="header__nav-link">Blog</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link  header__nav-link_active">Blog</a></li>
         </ul>
       </nav>
     </header>
     <main class="content">
       <div class="bg__line1"></div>
       <div class="bg__line2"></div>
-      <section class="startingSection">
-        <h2 class="startingSection__title">Let Your Home
-          Be Unique</h2>
-        <p class="startingSection__subtitle">There are many variations of the passages of
-          lorem Ipsum fromavailable, majority.</p>
-        <a href="./vue.html" class="startingSection__btn">
-          <div class="startingSection__btn-wrapper">
-            <span class="startingSection__btn-text">Задачи по Vue</span>
-            <svg class="startingSection__btn-ico" width="19" height="17" viewBox="0 0 19 17" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 8.43542L15.7232 8.29857M10.6182 1.91138L17.1412 8.43436L10.4868 15.0887" stroke="#CDA274"
-                stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
-            </svg>
+      <section class="blog-title">
+        <img class="blog-title__img" src="./assets/img/BlogMainImage.jpg" alt="blogImage">
+        <div class="blog-title__intro">
+          <h2 class="blog-title__title">Articles & News</h2>
+          <p class="blog-title__subtitle">Home / Blog</p>
+        </div>
+      </section>
+      <section class="blog-latest-post">
+        <h2 class="blog-latest-post__title">Latest Post</h2>
+        <article class="blog-latest-post__item">
+          <img src="./assets/img/LatestPostImage.jpg" alt="asd" class="blog-latest-post__item-img">
+          <div class="blog-latest-post__item-info">
+            <div class="blog-latest-post__item-description">
+              <h3 class="blog-latest-post__item-title">Low Cost Latest Invented Interior Designing Ideas</h3>
+              <p class="blog-latest-post__item-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis
+                dignissim maximus.posuere in.Contrary to popular belief.</p>
+              <p class="blog-latest-post__item-text">Lorem Ipsum is not simply random text. It has roots in a piece of
+                classica.</p>
+            </div>
+            <div class="blog-latest-post__item-more">
+              <p class="blog-latest-post__item-date">26 December,2022</p>
+              <a href="#" class="articles__item-btn blog-latest-post__item-link">
+                <svg class="articles__item-btn-ico" width="9" height="16" viewBox="0 0 9 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128" stroke="#292F36" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </a>
+            </div>
           </div>
-        </a>
+        </article>
       </section>
-      <section class="projects">
-        <h2 class="projects__title">Follow Our Projects</h2>
-        <p class="projects__subtitle">It is a long established fact that a reader will be distracted by the of readable
-          content of page lookings at its layouts points.</p>
-        <div class="projects__items">
-          <article class="projects__item">
-            <img class="projects__item-img projects__item-border-top-left" src="./assets/img/proj1.jpg" alt="proj1">
-            <div class="projects__item-description">
-              <div class="projects__item-info">
-                <h3 class="projects__item-title">Modern Kitchan</h3>
-                <p class="projects__item-subtitle">Decor / Artchitecture</p>
-              </div>
-              <a href="#" class="projects__item-btn">
-                <svg class="projects__item-btn-ico" width="10" height="20" viewBox="0 0 10 20" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-
-              </a>
-            </div>
-          </article>
-          <article class="projects__item">
-            <img class="projects__item-img projects__item-border-top-right" src="./assets/img/proj2.jpg" alt="proj2">
-            <div class="projects__item-description">
-              <div class="projects__item-info">
-                <h3 class="projects__item-title">Modern Kitchan</h3>
-                <p class="projects__item-subtitle">Decor / Artchitecture</p>
-              </div>
-              <a href="#" class="projects__item-btn">
-                <svg class="projects__item-btn-ico" width="10" height="20" viewBox="0 0 10 20" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-
-              </a>
-            </div>
-          </article>
-          <article class="projects__item">
-            <img class="projects__item-img projects__item-border-bottom-left" src="./assets/img/proj3.jpg" alt="proj3">
-            <div class="projects__item-description">
-              <div class="projects__item-info">
-                <h3 class="projects__item-title">Modern Kitchan</h3>
-                <p class="projects__item-subtitle">Decor / Artchitecture</p>
-              </div>
-              <a href="#" class="projects__item-btn">
-                <svg class="projects__item-btn-ico" width="10" height="20" viewBox="0 0 10 20" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-
-              </a>
-            </div>
-          </article>
-          <article class="projects__item">
-            <img class="projects__item-img projects__item-border-bottom-right" src="./assets/img/proj4.jpg" alt="proj4">
-            <div class="projects__item-description">
-              <div class="projects__item-info">
-                <h3 class="projects__item-title">Modern Kitchan</h3>
-                <p class="projects__item-subtitle">Decor / Artchitecture</p>
-              </div>
-              <a href="#" class="projects__item-btn">
-                <svg class="projects__item-btn-ico" width="10" height="20" viewBox="0 0 10 20" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="achievements">
-        <div class="achievements__item">
-          <h2 class="achievements__item-title">12</h2>
-          <p class="achievements__item-subtitle">Years Of Experiance</p>
-        </div>
-        <div class="achievements__item">
-          <h2 class="achievements__item-title">85</h2>
-          <p class="achievements__item-subtitle">Success Project</p>
-        </div>
-        <div class="achievements__item">
-          <h2 class="achievements__item-title">15</h2>
-          <p class="achievements__item-subtitle">Active Project</p>
-        </div>
-        <div class="achievements__item">
-          <h2 class="achievements__item-title">95</h2>
-          <p class="achievements__item-subtitle">Happy CUstomers</p>
-        </div>
-      </section>
-      <section class="articles">
-        <h2 class="articles__title">Articles & News</h2>
-        <p class="articles__subtitle">It is a long established fact that a reader will be distracted by the of readable
-          content of a page when lookings at its layouts the points of using.</p>
-        <div class="articles__items">
-          <article class="articles__item" v-for="card in cards.slice(0, 3)" :key="card.id">
+      <section class="blog-articles">
+        <h2 class="blog-articles__title">Articles & News</h2>
+        <div class="blog-articles__items">
+          <article class="articles__item" v-for="card in cards" :key="card.id">
             <img :src=card.url alt="art1" class="articles__item-img">
             <span class="articles__item-design">{{card.tag}}</span>
             <div class="articles__item-info">
@@ -167,6 +89,18 @@
               </div>
             </div>
           </article>
+        </div>
+        <div class="blog-articles__pagination">
+          <a href="#" class="blog-articles__pagination-item blog-articles__pagination-item_active">01</a>
+          <a href="#" class="blog-articles__pagination-item">02</a>
+          <a href="#" class="blog-articles__pagination-item">03</a>
+          <a href="#" class="blog-articles__pagination-item">
+            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.55714 15L7.5 8.31429L1.55714 1.62857" stroke="#292F36" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+          </a>
         </div>
       </section>
     </main>
