@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/scripts/index.js',
@@ -24,6 +25,18 @@ module.exports = {
           'css-loader', // Translates CSS into CommonJS modules
           'sass-loader' // Compiles SCSS to CSS
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192, // Опционально: задайте предельный размер для включения изображений непосредственно в код (base64)
+              name: 'images/[name].[hash:8].[ext]' // Опционально: используйте хешированные имена для изображений
+            }
+          }
+        ]
       }
     ]
   },
@@ -40,6 +53,11 @@ module.exports = {
       template: './src/blog.html', // путь к вашему HTML-шаблону
       filename: 'blog.html'
     })
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: 'src/assets/img', to: 'images' }
+    //   ]
+    // })
   ],
   devServer: {
     static: {
