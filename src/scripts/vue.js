@@ -14,7 +14,16 @@ const App = Vue.createApp({
         { id: 2, title: 'Milk', price: 20 },
         { id: 9, title: 'Cheese', price: 90 }
       ],
-      selected: ''
+      selected: '',
+      title: 'Перевернуть',
+      add: 'Добавить шаблонную строку',
+      add2: 'Добавить',
+      del: 'Удалить последний элемент',
+      list: [
+        { id: 1, text: 'xz' },
+        { id: 2, text: 'xz2' }
+      ],
+      inputValue: ''
     };
   },
   methods: {
@@ -30,6 +39,27 @@ const App = Vue.createApp({
     },
     ascendingSort() {
       this.products.sort((a, b) => a.price - b.price);
+    },
+    reverseText() {
+      this.title = this.title.split('').reverse().join('');
+    },
+    pushTemplateStringToArray() {
+      this.list.push({ id: this.list.length + 1, text: 'Новый элемент списка' });
+    },
+    pushStringToArray(event) {
+      event.preventDefault();
+      this.list.push({ id: this.list.length + 1, text: this.inputValue });
+      this.inputValue = '';
+    },
+    deleteLastElementFromArray() {
+      this.list.pop();
+    },
+    deleteElementFromArray(e, itemFromPage) {
+      this.list.forEach((item, index) => {
+        if (item.id === itemFromPage.id) {
+          this.list.splice(index, 1);
+        }
+      });
     }
   }
 });
