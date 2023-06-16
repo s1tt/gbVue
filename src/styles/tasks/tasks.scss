@@ -16,12 +16,16 @@
   align-items: center;
 }
 
-.task1 {
+.task1,
+.task2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   gap: 1rem;
+}
+.task2 {
+  align-items: start;
 }
 .products {
   padding: 0;
