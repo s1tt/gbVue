@@ -25,19 +25,20 @@ module.exports = {
           'css-loader', // Translates CSS into CommonJS modules
           'sass-loader' // Compiles SCSS to CSS
         ]
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192, // Опционально: задайте предельный размер для включения изображений непосредственно в код (base64)
-              name: 'images/[name].[hash:8].[ext]' // Опционально: используйте хешированные имена для изображений
-            }
-          }
-        ]
       }
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 8192,
+      //         name: '[name].[ext]',
+      //         outputPath: 'images'
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   },
   plugins: [
@@ -54,9 +55,7 @@ module.exports = {
       filename: 'blog.html'
     })
     // new CopyWebpackPlugin({
-    //   patterns: [
-    //     { from: 'src/assets/img', to: 'images' }
-    //   ]
+    //   patterns: [{ from: 'src/assets/img', to: 'images' }]
     // })
   ],
   devServer: {
