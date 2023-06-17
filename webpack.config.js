@@ -5,7 +5,13 @@ module.exports = {
   entry: './src/scripts/index.js',
   output: {
     path: path.resolve(__dirname, './src/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    assetModuleFilename: '[hash][ext]'
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   module: {
     rules: [
@@ -14,30 +20,30 @@ module.exports = {
         use: ['html-loader']
       },
       {
-        test: /\.css$/, // Match CSS files
-        use: ['style-loader', 'css-loader'] // Use both loaders
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/, // Match SCSS files
-        use: [
-          'style-loader', // Injects CSS into the DOM
-          'css-loader', // Translates CSS into CommonJS modules
-          'sass-loader' // Compiles SCSS to CSS
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource'
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // путь к вашему HTML-шаблону
+      template: './src/index.html',
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/vue.html', // путь к вашему HTML-шаблону
+      template: './src/vue.html',
       filename: 'vue.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/blog.html', // путь к вашему HTML-шаблону
+      template: './src/blog.html',
       filename: 'blog.html'
     })
   ],

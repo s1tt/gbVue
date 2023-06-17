@@ -151,7 +151,7 @@
           content of a page when lookings at its layouts the points of using.</p>
         <div class="articles__items">
           <article class="articles__item" v-for="card in cards.slice(0, 3)" :key="card.id">
-            <img :src=card.url alt="art1" class="articles__item-img">
+            <img :src=getCardImageUrl(card.url) alt="art1" class="articles__item-img">
             <span class="articles__item-design">{{card.tag}}</span>
             <div class="articles__item-info">
               <h3 class="articles__item-title">{{card.title}}</h3>
