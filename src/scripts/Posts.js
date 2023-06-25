@@ -12,7 +12,7 @@ export default {
     selectedTag: Object
   },
   created() {
-    this.cards = cardsData;
+    this.cards = JSON.parse(JSON.stringify(cardsData));
     this.updateCardsOnPage();
   },
   methods: {
@@ -43,7 +43,7 @@ export default {
   <article class="blog-details__post" v-for="item in cardsOnPage">
     <h3 class="blog-details__post-title">{{item.title}}</h3>
     <figure class="blog-details__post-figure">
-      <img class="blog-details__post-img" src="./assets/img/blogDetailsPost1.jpg" alt="Photo">
+      <img class="blog-details__post-img" :src="item.imgUrl.blogDetails1" alt="Photo">
       <figcaption class="blog-details__post-figcaption"><span>{{item.date}}</span><span>Interior / Home / Decore</span></figcaption>
     </figure>
     <p class="blog-details__post-text blog-details__post-text-margin">{{item.text.main.paragraph1}}</p>
@@ -56,7 +56,7 @@ export default {
     <ol class="blog-details__post-list">
       <li class="blog-details__post-list-item" v-for="item in item.text.more.list">{{item}}</li>
     </ol>
-    <img class="blog-details__post-img" src="./assets/img/blogDetailsPost2.jpg" alt="Photo">
+    <img class="blog-details__post-img" :src="item.imgUrl.blogDetails2" alt="Photo">
     <p class="blog-details__post-text">{{item.text.more.paragraph}}</p>
   </article>
 </div>

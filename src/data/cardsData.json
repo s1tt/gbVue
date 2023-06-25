@@ -3,8 +3,9 @@
     "id": 1,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art1.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art1.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "1",
@@ -32,14 +33,15 @@
     "id": 2,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art2.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art2.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "2",
       "title": "Bedroom"
     },
-    "date": "26 December,2022 ",
+    "date": "1 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -61,14 +63,15 @@
     "id": 3,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art3.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art3.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "3",
       "title": "Building"
     },
-    "date": "26 December,2022 ",
+    "date": "2 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -90,14 +93,15 @@
     "id": 4,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art4.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art4.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "4",
       "title": "Architecture"
     },
-    "date": "26 December,2022 ",
+    "date": "3 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -119,14 +123,15 @@
     "id": 5,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art5.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art5.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "5",
       "title": "Kitchen Planning"
     },
-    "date": "26 December,2022 ",
+    "date": "4 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -148,14 +153,15 @@
     "id": 6,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art6.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art6.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "6",
       "title": "Bedroom"
     },
-    "date": "26 December,2022 ",
+    "date": "5 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -177,14 +183,15 @@
     "id": 7,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art1.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art1.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "1",
       "title": "Kitchen"
     },
-    "date": "26 December,2022 ",
+    "date": "6 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -206,14 +213,15 @@
     "id": 8,
     "title": "Let’s Get Solution For Building Construction Work",
     "imgUrl": {
-      "one": "../assets/img/art2.jpg",
-      "two": "../assets/img/art1-2.jpg"
+      "main": "../assets/img/art2.jpg",
+      "blogDetails1": "../assets/img/blogDetailsPost1.jpg",
+      "blogDetails2": "../assets/img/blogDetailsPost2.jpg"
     },
     "tag": {
       "id": "2",
       "title": "Bedroom"
     },
-    "date": "26 December,2022 ",
+    "date": "7 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -242,7 +250,7 @@
       "id": "3",
       "title": "Building"
     },
-    "date": "26 December,2022 ",
+    "date": "8 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",
@@ -271,7 +279,7 @@
       "id": "4",
       "title": "Architecture"
     },
-    "date": "26 December,2022 ",
+    "date": "9 December,2022 ",
     "text": {
       "main": {
         "paragraph1": "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.",

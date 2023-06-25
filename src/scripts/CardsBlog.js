@@ -10,7 +10,7 @@ export default {
     };
   },
   created() {
-    this.cards = cardsData;
+    this.cards = JSON.parse(JSON.stringify(cardsData));
   },
   methods: {
     getCardImageUrl(url) {
@@ -20,8 +20,8 @@ export default {
   computed: {},
   template: `
         <article class="articles__item" v-for="card in cards.slice(0, 6)" :key="card.id">
-          <img :src=card.imgUrl.one alt="art1" class="articles__item-img">
-          <span class="articles__item-design">{{card.tag}}</span>
+          <img :src=card.imgUrl.main alt="art1" class="articles__item-img">
+          <span class="articles__item-design">{{card.tag.title}}</span>
           <div class="articles__item-info">
             <h3 class="articles__item-title">{{card.title}}</h3>
             <div class=" articles__item-description">
