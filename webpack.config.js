@@ -38,15 +38,20 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './src/vue.html',
-      filename: 'vue.html'
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/vue.html',
+    //   filename: 'vue.html'
+    // }),
     new HtmlWebpackPlugin({
       template: './src/blog.html',
       filename: 'blog.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/blog-details.html',
+      filename: 'blog-details.html'
     })
   ],
+
   devServer: {
     static: {
       directory: path.join(__dirname, './src')
