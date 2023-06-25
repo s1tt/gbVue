@@ -15,7 +15,6 @@ export default {
   methods: {
     handleTagSelected(tag) {
       this.selectedTag = tag;
-      console.log(this.selectedTag);
     }
   },
   template: `
