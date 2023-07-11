@@ -2,6 +2,7 @@
   <InternoHeader />
   <InternoMain />
   <InternoFooter />
+  <ProductDetails />
 </template>
 
 <script>
@@ -10,12 +11,15 @@ import InternoHeader from './components/Header.vue';
 import InternoMain from './components/Main.vue';
 import InternoFooter from './components/Footer.vue';
 
+import ProductDetails from './components/VueTask/ProductDetails';
+
 export default {
   name: 'App',
   components: {
     InternoHeader,
     InternoMain,
     InternoFooter,
+    ProductDetails,
   },
 };
 </script>
