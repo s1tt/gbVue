@@ -211,7 +211,7 @@ export default {
 @import '../assets/styles/constants.scss';
 
 .startingSection {
-  background-image: url('../assets/img/startingImage.jpg');
+  background-image: url('@/assets/img/startingImage.jpg');
   background-size: cover;
   background-size: contain;
   height: 758px;

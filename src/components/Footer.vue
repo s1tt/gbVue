@@ -4,7 +4,7 @@
     <div class="bg__line2"></div>
     <div class="footer__column footer__column-info">
       <h2 class="footer__logo">
-        <router-link to="/" class="header__logo-link">
+        <router-link to="/home" class="header__logo-link">
           <svg
             class="footer__logo-ico"
             width="34"
@@ -88,7 +88,7 @@
       <nav class="footer__nav">
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
-            <router-link to="/" class="footer__nav-item-link">Home</router-link>
+            <router-link to="/home" class="footer__nav-item-link">Home</router-link>
           </li>
           <li class="footer__nav-item">
             <router-link to="/project" class="footer__nav-item-link">Project</router-link>
@@ -143,10 +143,11 @@ export default {
     margin: 0;
     transition: 0.3s;
     margin-bottom: 18px;
+    transition: 0.3s;
   }
 
   &__logo:hover {
-    transform: scale(1.04);
+    opacity: 0.6;
   }
 
   &__logo-link {

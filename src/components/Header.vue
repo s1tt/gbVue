@@ -3,7 +3,7 @@
     <div class="bg__line1"></div>
     <div class="bg__line2"></div>
     <h1 class="header__logo">
-      <router-link to="/" class="header__logo-link">
+      <router-link to="/home" class="header__logo-link">
         <svg
           class="header__logo-ico"
           width="34"
@@ -25,7 +25,7 @@
       <ul class="header__nav-list">
         <li class="header__nav-item">
           <!-- header__nav-link_active -->
-          <router-link to="/" class="header__nav-link">Home</router-link>
+          <router-link to="/home" class="header__nav-link">Home</router-link>
         </li>
         <li class="header__nav-item">
           <router-link to="/project" class="header__nav-link">Project</router-link>
