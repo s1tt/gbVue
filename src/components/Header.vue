@@ -3,7 +3,7 @@
     <div class="bg__line1"></div>
     <div class="bg__line2"></div>
     <h1 class="header__logo">
-      <a href="./index.html" class="header__logo-link">
+      <router-link to="/" class="header__logo-link">
         <svg
           class="header__logo-ico"
           width="34"
@@ -19,15 +19,20 @@
           />
         </svg>
         <span class="header__logo-title">Interno</span>
-      </a>
+      </router-link>
     </h1>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="./index.html" class="header__nav-link header__nav-link_active">Home</a>
+          <!-- header__nav-link_active -->
+          <router-link to="/" class="header__nav-link">Home</router-link>
         </li>
-        <li class="header__nav-item"><a href="#" class="header__nav-link">Project</a></li>
-        <li class="header__nav-item"><a href="./blog.html" class="header__nav-link">Blog</a></li>
+        <li class="header__nav-item">
+          <router-link to="/project" class="header__nav-link">Project</router-link>
+        </li>
+        <li class="header__nav-item">
+          <router-link to="/blog" class="header__nav-link">Blog</router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -60,7 +65,7 @@ export default {
   }
 
   &__logo:hover {
-    transform: scale(1.04);
+    opacity: 0.6;
   }
 
   &__logo-link {

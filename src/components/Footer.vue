@@ -4,7 +4,7 @@
     <div class="bg__line2"></div>
     <div class="footer__column footer__column-info">
       <h2 class="footer__logo">
-        <a href="./index.html" class="footer__logo-link">
+        <router-link to="/" class="header__logo-link">
           <svg
             class="footer__logo-ico"
             width="34"
@@ -21,7 +21,7 @@
             />
           </svg>
           <span class="footer__logo-title">Interno</span>
-        </a>
+        </router-link>
       </h2>
       <p class="footer__description">
         It is a long established fact that a reader will be distracted lookings.
@@ -88,11 +88,13 @@
       <nav class="footer__nav">
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
-            <a href="./index.html" class="footer__nav-item-link">Home</a>
+            <router-link to="/" class="footer__nav-item-link">Home</router-link>
           </li>
-          <li class="footer__nav-item"><a href="#" class="footer__nav-item-link">Project</a></li>
           <li class="footer__nav-item">
-            <a href="./blog.html" class="footer__nav-item-link">Blog</a>
+            <router-link to="/project" class="footer__nav-item-link">Project</router-link>
+          </li>
+          <li class="footer__nav-item">
+            <router-link to="/blog" class="footer__nav-item-link">Blog</router-link>
           </li>
         </ul>
       </nav>

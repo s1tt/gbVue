@@ -1,25 +1,23 @@
 <template>
   <InternoHeader />
-  <InternoMain />
+  <main class="content">
+    <div class="bg__line1"></div>
+    <div class="bg__line2"></div>
+    <router-view />
+  </main>
   <InternoFooter />
-  <ProductDetails />
 </template>
 
 <script>
 import 'normalize.css';
 import InternoHeader from './components/Header.vue';
-import InternoMain from './components/Main.vue';
 import InternoFooter from './components/Footer.vue';
-
-import ProductDetails from './components/VueTask/ProductDetails';
 
 export default {
   name: 'App',
   components: {
     InternoHeader,
-    InternoMain,
     InternoFooter,
-    ProductDetails,
   },
 };
 </script>

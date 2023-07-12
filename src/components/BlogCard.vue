@@ -1,11 +1,11 @@
 <template>
-  <article class="articles__item" v-for="card in cards.slice(0, 6)" :key="card.id">
-    <img :src="card.imgUrl.main" alt="art1" class="articles__item-img" />
-    <span class="articles__item-design">{{ card.tag.title }}</span>
+  <article class="articles__item">
+    <img :src="cardData.imgUrl.main" alt="art1" class="articles__item-img" />
+    <span class="articles__item-design">{{ cardData.tag.title }}</span>
     <div class="articles__item-info">
-      <h3 class="articles__item-title">{{ card.title }}</h3>
+      <h3 class="articles__item-title">{{ cardData.title }}</h3>
       <div class="articles__item-description">
-        <p class="articles__item-date">{{ card.date }}</p>
+        <p class="articles__item-date">{{ cardData.date }}</p>
         <a href="./blog-details.html" class="articles__item-btn">
           <svg
             class="articles__item-btn-ico"
@@ -23,30 +23,20 @@
               stroke-linejoin="round"
             />
           </svg>
-          /</a
-        >
+        </a>
       </div>
     </div>
   </article>
 </template>
 
 <script>
-import cardsData from '../assets/data/cardsData';
-
 export default {
-  name: 'CardBlog',
+  name: 'BlogCard',
+  props: {
+    cardData: Object,
+  },
   data() {
-    return {
-      cards: [],
-    };
-  },
-  created() {
-    this.cards = JSON.parse(JSON.stringify(cardsData));
-  },
-  methods: {
-    getCardImageUrl(url) {
-      return url;
-    },
+    return {};
   },
 };
 </script>

@@ -1,0 +1,195 @@
+<template>
+  <PageTitle title="" subtitle="" :imgUrl="blogDetailsMain" />
+  <section class="blog-details__content">
+    <Posts :selected-tag="selectedTag" />
+    <Tags @tag-selected="handleTagSelected" />
+  </section>
+</template>
+
+<script>
+import PageTitle from '../components/PageTitle.vue';
+import blogDetailsMain from '../assets/img/blogDetailsMain.jpg';
+import Tags from '../components/Tags.vue';
+import Posts from '../components/Posts.vue';
+
+export default {
+  name: 'CardBlog',
+  data() {
+    return {
+      blogDetailsMain,
+      selectedTag: {},
+    };
+  },
+  components: {
+    Tags,
+    Posts,
+    PageTitle,
+  },
+  methods: {
+    handleTagSelected(tag) {
+      this.selectedTag = tag;
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+@import '../assets/styles/constants.scss';
+.blog-details {
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 96px;
+  }
+
+  &__post {
+    &-title {
+      margin: 0;
+      color: $mainFontColor;
+      font-size: 50px;
+      font-family: $mainFont;
+      line-height: 125%;
+      letter-spacing: 1px;
+      margin-bottom: 21px;
+    }
+    &-figure {
+      margin: 0;
+      margin-bottom: 48px;
+    }
+    &-img {
+      border-radius: 50px;
+      margin-bottom: 46px;
+    }
+    &-figcaption {
+      display: flex;
+      justify-content: space-between;
+      color: $secontFontColor;
+      font-size: 16px;
+      font-family: $secondFont;
+      line-height: 150%;
+      letter-spacing: 0.16px;
+      text-transform: capitalize;
+    }
+    &-text {
+      margin: 0;
+      color: $secontFontColor;
+      font-size: 22px;
+      font-family: $secondFont;
+      line-height: 150%;
+      letter-spacing: 0.22px;
+      &-margin {
+        margin-bottom: 20px;
+      }
+    }
+    &-blockquote {
+      position: relative;
+      margin: 35px 0 27px 0;
+      padding: 53px 0;
+      text-align: center;
+      border-radius: 50px;
+      background: #f4f0ec;
+    }
+    &-quotes {
+      position: absolute;
+      top: -25px;
+      left: calc(50% - 10px);
+      display: block;
+      color: #cda274;
+      text-align: center;
+      font-size: 200px;
+      font-family: $mainFont;
+      font-style: italic;
+      line-height: 125%;
+      letter-spacing: 4px;
+      transform: scale(-1, -1);
+    }
+    &-quote-text {
+      margin: 144px auto 0;
+      color: #cda274;
+      text-align: center;
+      font-size: 25px;
+      font-family: DM Serif Display;
+      font-style: italic;
+      line-height: 125%;
+      letter-spacing: 0.5px;
+      max-width: 355px;
+    }
+    &-list {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      list-style-type: none;
+      counter-reset: my-counter;
+      padding-left: 0;
+
+      margin-bottom: 40px;
+
+      &-item {
+        color: #4d5053;
+        font-size: 22px;
+        font-family: Jost;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+
+        position: relative;
+        padding-left: 20px;
+        &::before {
+          content: counter(my-counter);
+          counter-increment: my-counter;
+          position: absolute;
+          left: 0;
+          color: #cda274;
+          font-size: 20px;
+          font-family: $mainFont;
+          line-height: 125%;
+          letter-spacing: 0.4px;
+        }
+      }
+    }
+  }
+  &__tags {
+    padding-left: 52px;
+
+    &-title {
+      margin: 0;
+      margin-bottom: 24px;
+      color: $mainFontColor;
+      font-size: 25px;
+      font-family: $mainFont;
+      line-height: 125%;
+      letter-spacing: 0.5px;
+    }
+    &-list {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    &-item {
+      padding: 9px 30px;
+      background-color: $tagBgColor;
+      border-radius: 10px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: 0.3s;
+      &:active {
+        transform: translate(3px, 3px);
+      }
+      &:hover {
+        color: #ffffff;
+        background-color: $mainFontColor;
+      }
+
+      &_active {
+        color: #ffffff;
+        background-color: $mainFontColor;
+      }
+    }
+  }
+}
+</style>
