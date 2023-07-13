@@ -10,22 +10,25 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'RoomSlider',
   props: {
     selectedRoom: String,
   },
   methods: {
+    ...mapMutations(['selectProjectRoom']),
+
     handleClick(event) {
-      const selectedRoom = event.target.dataset.room;
-      if (selectedRoom) {
-        this.$emit('update:selectedRoom', selectedRoom);
+      const room = event.target.dataset.room;
+      if (room) {
+        this.selectProjectRoom(event.target.dataset.room);
       }
       event.target
         .closest('.room-slider__list')
         .querySelectorAll('.room-slider__item')
         .forEach((element) => element.classList.remove('room-slider__item_active'));
-      console.log();
       event.target.classList.add('room-slider__item_active');
     },
   },

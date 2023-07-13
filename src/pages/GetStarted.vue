@@ -1,34 +1,29 @@
 <template>
-  <PageTitle title="" subtitle="" :imgUrl="blogDetailsMain" />
+  <PageTitle title="" subtitle="" :imgUrl="blogDetailsMainImage" />
   <section class="blog-details__content">
-    <Posts :selected-tag="selectedTag" />
-    <Tags @tag-selected="handleTagSelected" />
+    <Posts />
+    <Tags />
   </section>
 </template>
 
 <script>
 import PageTitle from '../components/PageTitle.vue';
-import blogDetailsMain from '../assets/img/blogDetailsMain.jpg';
 import Tags from '../components/Tags.vue';
 import Posts from '../components/Posts.vue';
+
+import blogDetailsMainImage from '../assets/img/blogDetailsMain.jpg';
 
 export default {
   name: 'CardBlog',
   data() {
     return {
-      blogDetailsMain,
-      selectedTag: {},
+      blogDetailsMainImage,
     };
   },
   components: {
     Tags,
     Posts,
     PageTitle,
-  },
-  methods: {
-    handleTagSelected(tag) {
-      this.selectedTag = tag;
-    },
   },
 };
 </script>

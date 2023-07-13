@@ -23,7 +23,7 @@
         </div>
         <div class="blog-latest-post__item-more">
           <p class="blog-latest-post__item-date">26 December,2022</p>
-          <a href="#" class="articles__item-btn blog-latest-post__item-link">
+          <router-link to="/project-details" class="articles__item-btn blog-latest-post__item-link">
             <svg
               class="articles__item-btn-ico"
               width="9"
@@ -40,7 +40,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </article>
@@ -48,7 +48,7 @@
   <section class="blog-articles">
     <h2 class="blog-articles__title">Articles & News</h2>
     <div class="blog-articles__items">
-      <BlogCard v-for="cardData in cardsData.slice(0, 6)" :cardData="cardData" />
+      <CardBlog v-for="cardData in getAllCards.slice(0, 6)" :cardData="cardData" />
     </div>
     <Pagination />
   </section>
@@ -56,33 +56,27 @@
 
 <script>
 import PageTitle from '../components/PageTitle.vue';
-import BlogCard from '../components/BlogCard.vue';
+import CardBlog from '../components/CardBlog.vue';
 import Pagination from '../components/Pagination.vue';
 
-import cardsData from '../assets/data/cardsData';
 import blogMainImage from '@/assets/img/BlogMainImage.jpg';
+
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Blog',
   data() {
     return {
       blogMainImage,
-      cardsData: [],
-      selectedTag: {},
     };
   },
-  created() {
-    this.cardsData = JSON.parse(JSON.stringify(cardsData));
+  computed: {
+    ...mapGetters(['getAllCards']),
   },
   components: {
-    BlogCard,
+    CardBlog,
     PageTitle,
     Pagination,
-  },
-  methods: {
-    handleTagSelected(tag) {
-      this.selectedTag = tag;
-    },
   },
 };
 </script>

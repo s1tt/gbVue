@@ -3,10 +3,11 @@
     <h2 class="blog-details__tags-title">Tags</h2>
     <ul class="blog-details__tags-list">
       <li
-        @click="clickTag($event, item)"
+        @click="clickTag(item)"
         class="blog-details__tags-item"
-        v-for="item in tags"
+        v-for="item in getAllTags"
         :key="item.id"
+        :class="{ 'blog-details__tags-item_active': item.id === getSelectedTagId }"
       >
         {{ item.title }}
       </li>
@@ -15,28 +16,21 @@
 </template>
 
 <script>
-import tagsData from '../assets/data/tagsData.json';
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   name: 'InternoTags',
   data() {
-    return {
-      tags: [],
-    };
+    return {};
   },
-  props: {
-    selectedTag: Object,
-  },
-  created() {
-    this.tags = tagsData;
+  computed: {
+    ...mapGetters(['getAllTags', 'getSelectedTagId']),
   },
   methods: {
-    clickTag(event, tag) {
-      document
-        .querySelectorAll('.blog-details__tags-item')
-        .forEach((item) => item.classList.remove('blog-details__tags-item_active'));
-      event.target.classList.add('blog-details__tags-item_active');
-      this.$emit('tag-selected', tag);
+    ...mapMutations(['selectTag']),
+
+    clickTag(tag) {
+      this.selectTag(tag.id);
     },
   },
 };

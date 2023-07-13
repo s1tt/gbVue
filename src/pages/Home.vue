@@ -45,7 +45,7 @@
             <p class="projects__item-subtitle">Decor / Artchitecture</p>
           </div>
           <!-- eslint-disable-next-line -->
-          <a href="#" class="projects__item-btn">
+          <router-link to="/project-details" class="projects__item-btn">
             <svg
               class="projects__item-btn-ico"
               width="10"
@@ -62,7 +62,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </article>
       <article class="projects__item">
@@ -77,7 +77,7 @@
             <p class="projects__item-subtitle">Decor / Artchitecture</p>
           </div>
           <!-- eslint-disable-next-line -->
-          <a href="#" class="projects__item-btn">
+          <router-link to="/project-details" class="projects__item-btn">
             <svg
               class="projects__item-btn-ico"
               width="10"
@@ -94,7 +94,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </article>
       <article class="projects__item">
@@ -109,7 +109,7 @@
             <p class="projects__item-subtitle">Decor / Artchitecture</p>
           </div>
           <!-- eslint-disable-next-line -->
-          <a href="#" class="projects__item-btn">
+          <router-link to="/project-details" class="projects__item-btn">
             <svg
               class="projects__item-btn-ico"
               width="10"
@@ -126,7 +126,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </article>
       <article class="projects__item">
@@ -141,7 +141,7 @@
             <p class="projects__item-subtitle">Decor / Artchitecture</p>
           </div>
           <!-- eslint-disable-next-line -->
-          <a href="#" class="projects__item-btn">
+          <router-link to="/project-details" class="projects__item-btn">
             <svg
               class="projects__item-btn-ico"
               width="10"
@@ -158,7 +158,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </article>
     </div>
@@ -188,13 +188,14 @@
       page when lookings at its layouts the points of using.
     </p>
     <div class="articles__items">
-      <CardMain />
+      <CardMain v-for="cardData in getAllCards.slice(0, 3)" :cardData="cardData" />
     </div>
   </section>
 </template>
 
 <script>
-import CardMain from '../components/Card.vue';
+import { mapGetters } from 'vuex';
+import CardMain from '../components/CardMain.vue';
 
 export default {
   name: 'InternoHome',
@@ -203,6 +204,9 @@ export default {
   },
   data() {
     return {};
+  },
+  computed: {
+    ...mapGetters(['getAllCards']),
   },
 };
 </script>

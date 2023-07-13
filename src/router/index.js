@@ -1,8 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import Home from '../pages/Home.vue';
 import Blog from '../pages/Blog.vue';
 import GetStarted from '../pages/GetStarted.vue';
 import Project from '../pages/Project.vue';
+import ProjectDetails from '../pages/ProjectDetails.vue';
 
 const routes = [
   {
@@ -25,9 +26,16 @@ const routes = [
     name: 'Project',
     component: Project,
   },
+  {
+    path: '/project-details',
+    name: 'ProjectDetails',
+    component: ProjectDetails,
+  },
 ];
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  // base: '/dist/',
+  // history: createWebHistory('/gbVue/'),
+  history: createWebHashHistory(),
   routes,
 });
 export default router;

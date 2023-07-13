@@ -1,7 +1,7 @@
 <template>
   <PageTitle title="Our Project" subtitle="Home / Project" :imgUrl="projectMainImage" />
   <section class="our-project">
-    <RoomSlider :selectedRoom="selectedRoom" @update:selectedRoom="updateSelectedRoom" />
+    <RoomSlider />
     <div class="our-project__items">
       <ProjectCard v-for="cardData in selectRoomData" :cardData="cardData" />
     </div>
@@ -10,43 +10,35 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import PageTitle from '../components/PageTitle.vue';
 import Pagination from '../components/Pagination.vue';
 import RoomSlider from '../components/RoomSlider.vue';
 import ProjectCard from '../components/ProjectCard.vue';
 
-import ourProjectData from '../assets/data/ourProjectData';
 import projectMainImage from '../assets/img/projectMainImage.jpg';
 
 export default {
   name: 'Project',
   data() {
     return {
-      selectedRoom: 'bedroom',
       projectMainImage,
-      ourProjectData: [],
     };
   },
-  created() {
-    this.ourProjectData = ourProjectData;
-    console.log(this.ourProjectData);
-  },
-  methods: {
-    updateSelectedRoom(room) {
-      this.selectedRoom = room;
-    },
-  },
   computed: {
+    ...mapGetters(['getAllOurProjectData', 'getSelectedRoom']),
+
     selectRoomData() {
-      switch (this.selectedRoom) {
+      switch (this.getSelectedRoom) {
         case 'bedroom':
-          return this.ourProjectData.bedRoom;
+          console.log(this.getAllOurProjectData.bedRoom);
+          return this.getAllOurProjectData.bedRoom;
         case 'bathroom':
-          return this.ourProjectData.bathroom;
+          return this.getAllOurProjectData.bathroom;
         case 'kitchen':
-          return this.ourProjectData.kitchen;
+          return this.getAllOurProjectData.kitchen;
         case 'living-area':
-          return this.ourProjectData.livingArea;
+          return this.getAllOurProjectData.livingArea;
         default:
           break;
       }

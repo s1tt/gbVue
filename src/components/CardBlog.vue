@@ -6,7 +6,7 @@
       <h3 class="articles__item-title">{{ cardData.title }}</h3>
       <div class="articles__item-description">
         <p class="articles__item-date">{{ cardData.date }}</p>
-        <a href="./blog-details.html" class="articles__item-btn">
+        <router-link to="/project-details" class="articles__item-btn">
           <svg
             class="articles__item-btn-ico"
             width="9"
@@ -23,7 +23,7 @@
               stroke-linejoin="round"
             />
           </svg>
-        </a>
+        </router-link>
       </div>
     </div>
   </article>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'BlogCard',
+  name: 'CardBlog',
   props: {
     cardData: Object,
   },

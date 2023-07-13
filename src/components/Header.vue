@@ -24,7 +24,6 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <!-- header__nav-link_active -->
           <router-link to="/home" class="header__nav-link">Home</router-link>
         </li>
         <li class="header__nav-item">

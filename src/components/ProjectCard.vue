@@ -6,7 +6,7 @@
         <h2 class="project-card__title">{{ cardData.title }}</h2>
         <p class="project-card__subtitle">{{ cardData.subtitle }}</p>
       </div>
-      <a href="#" class="project-card__btn">
+      <router-link to="/project-details" class="project-card__btn">
         <svg
           class="project-card__btn-ico"
           width="9"
@@ -23,7 +23,7 @@
             stroke-linejoin="round"
           />
         </svg>
-      </a>
+      </router-link>
     </div>
   </article>
 </template>
@@ -57,8 +57,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 4px;
-  }
-  &__img {
   }
   &__title {
     margin: 0;
