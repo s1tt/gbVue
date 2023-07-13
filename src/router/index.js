@@ -4,6 +4,7 @@ import Blog from '../pages/Blog.vue';
 import GetStarted from '../pages/GetStarted.vue';
 import Project from '../pages/Project.vue';
 import ProjectDetails from '../pages/ProjectDetails.vue';
+import PageNotFound from '../pages/PageNotFound.vue';
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     name: 'ProjectDetails',
     component: ProjectDetails,
   },
+  {
+    path: '',
+    redirect: './home',
+  },
+  { path: '/:pathMatch(.*)*', name: 'PageNotFound', component: PageNotFound },
 ];
 const router = createRouter({
   // base: '/dist/',
